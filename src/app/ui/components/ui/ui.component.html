@@ -1,9 +1,10 @@
 <div class="d-flex flex-column ui">
     <header>
-        <ng-content select=".tr-header"></ng-content>
-        <span (click)="toggle()">
-            <ng-content select=".tr-btn"></ng-content>
-        </span>
+      <ng-content select=".tr-header"></ng-content>
+      <span (click)="toggle()">
+        <ng-content *ngIf="close" select=".tr-open"></ng-content>
+        <ng-content *ngIf="!close" select=".tr-close"></ng-content>
+    </span>
     </header>
     <main class="d-flex flex-grow-1">
         <aside>
@@ -12,8 +13,9 @@
             </nav>
         </aside>
         <div class="d-flex flex-column flex-grow-1">
+
             <div class="flex-grow-1 content">
-                beau content
+                <ng-content select=".tr-content"></ng-content>
             </div>
             <footer>
                 <ng-content select=".tr-footer"></ng-content>

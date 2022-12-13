@@ -28,3 +28,19 @@ aside {
     background: var(--app-darklight2);
     padding-left: 15px;
 }
+
+.text {
+ /* width: 400px;*/
+   width: 70%;
+   border: 3px solid #73AD21;
+   border-radius: 10px;
+   background: #a9e0a2;
+}
+.text2{
+   align-items: right;
+   width: 70%;
+   border: 3px solid #e0ebd0;
+   border-radius: 10px;
+   background: #a9e0a2;
+   margin: 15px;
+  }
